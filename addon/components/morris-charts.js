@@ -16,16 +16,16 @@ default Ember.Component.extend({
     var chartBuilder;
     switch (type.toLowerCase()) {
       case 'area':
-        chartName = window.Morris.Area;
+        chartBuilder = window.Morris.Area;
         break;
       case 'line':
-        chartName = window.Morris.Line;
+        chartBuilder = window.Morris.Line;
         break;
       case 'bar':
-        chartName = window.Morris.Bar;
+        chartBuilder = window.Morris.Bar;
         break;
       case 'donut':
-        chartName = window.Morris.Donut;
+        chartBuilder = window.Morris.Donut;
         break;
     }
     this.set('instance', chartBuilder(options));
