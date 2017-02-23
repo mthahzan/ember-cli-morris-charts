@@ -49,6 +49,9 @@ default Ember.Component.extend({
         if (this.get('xLabelFormat')) {
             options.xLabelFormat = this.get('xLabelFormat');
         }
+        if (this.get('yLabelFormat')) {
+            options.yLabelFormat = this.get('yLabelFormat');
+        }
 
         if (this.get('lineColors')) {
             options.lineColors = this.get('lineColors');
