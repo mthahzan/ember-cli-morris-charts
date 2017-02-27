@@ -32,7 +32,7 @@ default Ember.Component.extend({
 
         options.element = this.$().attr('id');
         options.data = this.get('data');
-        options.resize = this.get('resize') ? this.get('resize') : false;
+        options.ykeys = this.get('resize') ? this.get('resize') : false;
 
         if (this.get('xKey')) {
             options.xkey = this.get('xKey');
@@ -49,6 +49,7 @@ default Ember.Component.extend({
         if (this.get('xLabelFormat')) {
             options.xLabelFormat = this.get('xLabelFormat');
         }
+
         if (this.get('yLabelFormat')) {
             options.yLabelFormat = this.get('yLabelFormat');
         }
