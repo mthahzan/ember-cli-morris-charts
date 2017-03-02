@@ -32,7 +32,7 @@ default Ember.Component.extend({
 
         options.element = this.$().attr('id');
         options.data = this.get('data');
-        options.ykeys = this.get('resize') ? this.get('resize') : false;
+        options.resize = this.get('resize') ? this.get('resize') : false;
 
         if (this.get('xKey')) {
             options.xkey = this.get('xKey');
@@ -205,4 +205,8 @@ default Ember.Component.extend({
         var instance = this.get('instance');
         instance.setData(this.get('data'));
     }.observes('data.length'),
+    willDestroy: function() {
+        $(window).off('resize');
+        //window.Morris = NaN;
+    }
 });
